@@ -4,5 +4,10 @@ test('display welcome page', async ({ client }) => {
   const response = await client.get('/')
 
   response.assertStatus(200)
-  response.assertBodyContains({ hello: 'world' })
+  response.assertBodyContains({ app: 'favio-back' })
 })
+/*test('nom de app',async({client})=>{
+  const resposta= await client.get('/')
+  resposta.assertStatus(200)
+  resposta.assertBodyContains({app:'favio-back'})
+})*/
